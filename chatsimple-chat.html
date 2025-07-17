@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChatSimple Chat Demo</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+        }
+        
+        .header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+        }
+        
+        .back-link {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+        }
+        
+        .back-link:hover {
+            text-decoration: underline;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        .info-box {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+        
+        .info-box h2 {
+            color: #2c3e50;
+            margin-top: 0;
+        }
+        
+        .info-box p {
+            color: #666;
+            line-height: 1.6;
+        }
+        
+        .demo-section {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            min-height: 400px;
+        }
+        
+        .demo-section h2 {
+            color: #2c3e50;
+            margin-top: 0;
+        }
+        
+        .chat-placeholder {
+            text-align: center;
+            color: #666;
+            font-style: italic;
+            padding: 40px;
+            background-color: #f8f9fa;
+            border-radius: 4px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <a href="/" class="back-link">← Back to Home</a>
+        <h1>ChatSimple Chat Demo</h1>
+        <p>Experience AI-powered customer support with ChatSimple</p>
+    </div>
+    
+    <div class="container">
+        <div class="info-box">
+            <h2>About ChatSimple</h2>
+            <p>ChatSimple provides intelligent chat solutions for businesses. This demo showcases the ChatSimple widget integration for customer support and engagement.</p>
+        </div>
+        
+        <div class="demo-section">
+            <h2>Live Chat Demo</h2>
+            <p>The ChatSimple widget should appear in the bottom-right corner of your screen. You can interact with it to test the chat functionality.</p>
+            
+            <div class="chat-placeholder">
+                <p>Look for the ChatSimple widget in the bottom-right corner of your screen</p>
+                <p>If you don't see it, please refresh the page or check your browser settings</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ChatSimple Widget Script -->
+    <script type="text/javascript">
+        (function(){
+            var el=document.createElement('chat-bot');
+            el.setAttribute('platform_id','34c5e05f-5286-4856-a53d-ecbf2d0a1bc4');
+            el.setAttribute('user_id','edc701d1-58fe-4fbd-aaa5-f8153145f5de');
+            el.setAttribute('chatbot_id','db062fff-5551-4afc-a45b-3dcbdbcb9758');
+            var a=document.createElement('a');
+            a.href='https://www.chatsimple.ai/?utm_source=widget&utm_medium=referral';
+            a.innerHTML='chatsimple';
+            el.appendChild(a);
+            document.body.appendChild(el);
+            var cs=document.createElement('script');
+            cs.src='https://chatsimple-widget.s3.us-east-2.amazonaws.com/chat-bot-loader.js';
+            document.body.appendChild(cs);
+        })();
+    </script>
+</body>
+</html>
