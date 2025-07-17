@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SupportAI Chat Demo</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+        }
+        
+        .header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+        }
+        
+        .back-link {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+        }
+        
+        .back-link:hover {
+            text-decoration: underline;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        .info-box {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+        
+        .info-box h2 {
+            color: #2c3e50;
+            margin-top: 0;
+        }
+        
+        .info-box p {
+            color: #666;
+            line-height: 1.6;
+        }
+        
+        .demo-section {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            min-height: 400px;
+        }
+        
+        .demo-section h2 {
+            color: #2c3e50;
+            margin-top: 0;
+        }
+        
+        .chat-placeholder {
+            text-align: center;
+            color: #666;
+            font-style: italic;
+            padding: 40px;
+            background-color: #f8f9fa;
+            border-radius: 4px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <a href="/" class="back-link">← Back to Home</a>
+        <h1>SupportAI Chat Demo</h1>
+        <p>Experience AI-powered customer support with SupportAI</p>
+    </div>
+    
+    <div class="container">
+        <div class="info-box">
+            <h2>About SupportAI</h2>
+            <p>SupportAI provides intelligent customer support automation through AI-powered chat solutions. This demo showcases the SupportAI widget integration for seamless customer engagement.</p>
+        </div>
+        
+        <div class="demo-section">
+            <h2>Live Chat Demo</h2>
+            <p>The SupportAI widget should appear in the bottom-right corner of your screen. You can interact with it to test the AI-powered chat functionality.</p>
+            
+            <div class="chat-placeholder">
+                <p>Look for the SupportAI widget in the bottom-right corner of your screen</p>
+                <p>If you don't see it, please refresh the page or check your browser settings</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- SupportAI Widget Script -->
+    <script type="text/javascript">
+        (function(){
+            d=document;
+            s=d.createElement("script");
+            s.src="https://widget.supportai.com/c37c896a27b7b3f.js";
+            s.async=1;
+            d.getElementsByTagName("head")[0].appendChild(s);
+        })();
+    </script>
+</body>
+</html>

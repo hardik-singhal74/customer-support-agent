@@ -54,6 +54,10 @@ app.get('/chatling', (req, res) => {
   res.sendFile(path.join(__dirname, 'chatling-chat.html'));
 });
 
+app.get('/supportai', (req, res) => {
+  res.sendFile(path.join(__dirname, 'supportai-chat.html'));
+});
+
 app.post('/api/verify-user', (req, res) => {
   const { userId } = req.body;
   
