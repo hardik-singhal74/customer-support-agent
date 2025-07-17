@@ -50,66 +50,10 @@
   </head>
   <body>
     <div id="chat-widget-container"></div>
-
-    <script type="text/javascript">
-      (function () {
-        "use strict";
-        if (
-          ((window.InlineHelpPreLoadQueue = []),
-          window.InlineHelp && window.InlineHelp.invoked)
-        )
-          throw "InlineHelp snippet can't be used twice.";
-        var l = function (i) {
-          return function () {
-            window.InlineHelpPreLoadQueue.push(
-              [i].concat(Array.from(arguments))
-            );
-          };
-        };
-        function r(i) {
-          if (this.loading)
-            throw new Error(
-              'Duplicate Client load prevented. Looks like you have called "InlineHelp.load" multiple times.'
-            );
-          this.loading = !0;
-          var n = document.createElement("script");
-          (n.type = "text/javascript"),
-            (n.async = !0),
-            (n.src = "https://cdn.inlinehelp.com/client/client.umd.js"),
-            document.head.appendChild(n),
-            (this._options = Object.assign(i, {
-              snippetVersion: "2024-02-16",
-            }));
-        }
-        for (
-          var e = {
-              _options: {},
-              invoked: !0,
-              loading: !1,
-              methods: [
-                "identify",
-                "setLogLevel",
-                "getLogLevel",
-                "update",
-                "reset",
-                "resetUI",
-                "explainThis",
-              ],
-              load: r,
-            },
-            t = 0;
-          t < e.methods.length;
-          t++
-        ) {
-          var o = e.methods[t];
-          e[o] = l(o);
-        }
-        window.InlineHelp = e;
-      })();
-
-      window.InlineHelp.load({
-        clientApiKey: "5Fpf9Wjht4kvgAZUrtbRnSmG",
-      });
-    </script>
+    <script
+      src="https://cdn.tinytalk.ai/latest/tiny-talk-sdk.min.umd.js"
+      data-tiny-bot-id="99b82969-b590-4e46-a36c-19c19f00e3ca"
+      defer
+    ></script>
   </body>
 </html>
