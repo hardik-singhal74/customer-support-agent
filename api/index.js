@@ -23,6 +23,10 @@ app.get('/tidio', (req, res) => {
   res.sendFile(path.join(__dirname, '..', 'tidio-chat.html'));
 });
 
+app.get('/supermoon', (req, res) => {
+  res.sendFile(path.join(__dirname, '..', 'supermoon-chat.html'));
+});
+
 app.get('/api/health', (req, res) => {
   res.json({ 
     status: 'ok', 
