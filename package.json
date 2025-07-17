@@ -1,9 +1,15 @@
 {
-  "name": "static-html-server",
+  "name": "inline-help-agent",
   "version": "1.0.0",
   "main": "server.js",
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
+  },
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "dev": "node server.js",
+    "test": "echo \"No tests specified\" && exit 0"
   },
   "dependencies": {
     "express": "^4.18.2"
