@@ -32,6 +32,10 @@ app.get('/supermoon', (req, res) => {
   res.sendFile(path.join(__dirname, 'supermoon-chat.html'));
 });
 
+app.get('/answerhq', (req, res) => {
+  res.sendFile(path.join(__dirname, 'answerhq-chat.html'));
+});
+
 app.get('/health', (req, res) => {
   res.json({ status: 'ok', port: PORT });
 });
