@@ -24,6 +24,10 @@ app.get('/tinytalk', (req, res) => {
   res.sendFile(path.join(__dirname, 'tinytalk-chat.html'));
 });
 
+app.get('/tidio', (req, res) => {
+  res.sendFile(path.join(__dirname, 'tidio-chat.html'));
+});
+
 app.get('/health', (req, res) => {
   res.json({ status: 'ok', port: PORT });
 });
