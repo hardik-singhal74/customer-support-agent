@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbase Integration</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .info-section {
+            background-color: #e8f4f8;
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        .info-section h3 {
+            color: #2c5282;
+            margin-top: 0;
+        }
+        .chat-status {
+            background-color: #e8f5e8;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .chat-status h3 {
+            color: #2d5a27;
+            margin-top: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Chatbase Integration</h1>
+        
+        <div class="info-section">
+            <h3>About This Demo</h3>
+            <p>This page demonstrates Chatbase integration. The chat widget is automatically loaded and ready to use - no login required!</p>
+        </div>
+
+        <div class="chat-status">
+            <h3>Chat Status</h3>
+            <p><strong>Status:</strong> <span id="chatStatus">Loading...</span></p>
+        </div>
+    </div>
+
+    <script>
+        // Initialize Chatbase directly without authentication
+        (function(){
+            if(!window.chatbase||window.chatbase("getState")!=="initialized"){
+                window.chatbase=(...arguments)=>{
+                    if(!window.chatbase.q){
+                        window.chatbase.q=[]
+                    }
+                    window.chatbase.q.push(arguments)
+                };
+                window.chatbase=new Proxy(window.chatbase,{
+                    get(target,prop){
+                        if(prop==="q"){
+                            return target.q
+                        }
+                        return(...args)=>target(prop,...args)
+                    }
+                })
+            }
+            
+            const onLoad=function(){
+                const script=document.createElement("script");
+                script.src="https://www.chatbase.co/embed.min.js";
+                script.id="iQGgwB5L4xHA7w4olJSYP";
+                script.domain="www.chatbase.co";
+                document.body.appendChild(script);
+                
+                // Update status when script loads
+                script.onload = function() {
+                    document.getElementById('chatStatus').textContent = 'Ready';
+                };
+                
+                script.onerror = function() {
+                    document.getElementById('chatStatus').textContent = 'Error loading chat';
+                };
+            };
+            
+            if(document.readyState==="complete"){
+                onLoad()
+            }else{
+                window.addEventListener("load",onLoad)
+            }
+        })();
+    </script>
+</body>
+</html>
