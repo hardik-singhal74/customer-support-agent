@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TinyTalk Chat Widget</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        .info {
+            margin: 20px 0;
+            padding: 15px;
+            background-color: #e3f2fd;
+            border-radius: 4px;
+        }
+        .back-link {
+            display: inline-block;
+            margin-top: 20px;
+            color: #1976d2;
+            text-decoration: none;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>TinyTalk Chat Widget Demo</h1>
+        <div class="info">
+            <p>This page demonstrates the TinyTalk chat widget integration.</p>
+            <p>The chat widget should appear in the bottom-right corner of this page.</p>
+            <p>Bot ID: 99b82969-b590-4e46-a36c-19c19f00e3ca</p>
+        </div>
+        <p>You can interact with the chat bot by clicking on the widget that appears on this page.</p>
+        <a href="/" class="back-link">← Back to Home</a>
+    </div>
+
+    <!-- TinyTalk Chat Widget Script -->
+    <script
+        src="https://cdn.tinytalk.ai/latest/tiny-talk-sdk.min.umd.js"
+        data-tiny-bot-id="99b82969-b590-4e46-a36c-19c19f00e3ca"
+        defer
+    ></script>
+</body>
+</html>
