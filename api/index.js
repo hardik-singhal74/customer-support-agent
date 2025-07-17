@@ -37,6 +37,10 @@ app.get('/chatbase', (req, res) => {
   res.sendFile(path.join(__dirname, '..', 'chatbase-chat.html'));
 });
 
+app.get('/websyte', (req, res) => {
+  res.sendFile(path.join(__dirname, '..', 'websyte-chat.html'));
+});
+
 app.post('/api/verify-user', (req, res) => {
   const { userId } = req.body;
   

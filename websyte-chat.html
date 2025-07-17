@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Websyte Chat Demo</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+        }
+        
+        .header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .chat-container {
+            height: calc(100vh - 80px);
+            padding: 0;
+        }
+        
+        .chat-frame {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        
+        .back-link {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+        }
+        
+        .back-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <a href="/" class="back-link">← Back to Home</a>
+        <h1>Websyte Chat Demo</h1>
+        <p>Experience AI-powered customer support with Websyte</p>
+    </div>
+    
+    <div class="chat-container">
+        <iframe
+            src="https://websyte.ai/share/w/d0f26a36-d869-486c-a2e0-486a75edf238?embed=true"
+            class="chat-frame"
+            title="AI Chat Widget"
+            allow="clipboard-write"
+        ></iframe>
+    </div>
+</body>
+</html>
