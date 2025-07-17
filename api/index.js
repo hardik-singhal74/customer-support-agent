@@ -45,6 +45,10 @@ app.get('/chatsimple', (req, res) => {
   res.sendFile(path.join(__dirname, '..', 'chatsimple-chat.html'));
 });
 
+app.get('/chatling', (req, res) => {
+  res.sendFile(path.join(__dirname, '..', 'chatling-chat.html'));
+});
+
 app.post('/api/verify-user', (req, res) => {
   const { userId } = req.body;
   
