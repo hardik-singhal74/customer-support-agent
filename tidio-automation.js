@@ -3,10 +3,137 @@ const puppeteer = require('puppeteer');
 // Configuration
 const TIDIO_PANEL_URL = 'https://www.tidio.com/panel/lyro-ai/data-sources/added';
 const WEBSITE_URLS = [
-  'https://example1.com',
-  'https://example2.com',
-  'https://example3.com',
-  // Add your website URLs here
+  // Current project URLs
+  'https://customer-support-agent-1.neetodeployapp.com',
+  'https://customer-support-agent.vercel.app',
+  
+  // Documentation and help sites
+  'https://docs.neeto.com',
+  'https://help.neeto.com',
+  'https://support.neeto.com',
+  'https://neeto.com/help',
+  'https://neeto.com/docs',
+  
+  // Popular documentation sites
+  'https://stackoverflow.com',
+  'https://developer.mozilla.org',
+  'https://docs.github.com',
+  'https://www.w3schools.com',
+  'https://reactjs.org/docs',
+  'https://nodejs.org/docs',
+  'https://expressjs.com',
+  
+  // AI and chat bot resources
+  'https://openai.com/docs',
+  'https://platform.openai.com/docs',
+  'https://docs.anthropic.com',
+  'https://huggingface.co/docs',
+  
+  // Customer support platforms
+  'https://help.intercom.com',
+  'https://support.zendesk.com',
+  'https://help.freshdesk.com',
+  'https://support.helpscout.com',
+  'https://help.drift.com',
+  'https://support.livechat.com',
+  
+  // Web development resources
+  'https://css-tricks.com',
+  'https://developer.chrome.com',
+  'https://web.dev',
+  'https://caniuse.com',
+  'https://codepen.io',
+  
+  // JavaScript libraries and frameworks
+  'https://vuejs.org',
+  'https://angular.io',
+  'https://svelte.dev',
+  'https://nextjs.org',
+  'https://nuxtjs.org',
+  'https://gatsbyjs.com',
+  
+  // Backend and database
+  'https://docs.mongodb.com',
+  'https://www.postgresql.org/docs',
+  'https://redis.io/documentation',
+  'https://firebase.google.com/docs',
+  'https://supabase.com/docs',
+  
+  // Cloud platforms
+  'https://docs.aws.amazon.com',
+  'https://cloud.google.com/docs',
+  'https://docs.microsoft.com/azure',
+  'https://docs.digitalocean.com',
+  'https://docs.netlify.com',
+  'https://vercel.com/docs',
+  'https://docs.heroku.com',
+  'https://docs.render.com',
+  
+  // Tools and utilities
+  'https://docs.docker.com',
+  'https://kubernetes.io/docs',
+  'https://docs.ansible.com',
+  'https://www.jenkins.io/doc',
+  'https://docs.gitlab.com',
+  'https://help.github.com',
+  
+  // Testing and development
+  'https://jestjs.io/docs',
+  'https://docs.cypress.io',
+  'https://playwright.dev/docs',
+  'https://www.selenium.dev/documentation',
+  'https://mochajs.org',
+  
+  // Design and UI
+  'https://getbootstrap.com/docs',
+  'https://tailwindcss.com/docs',
+  'https://mui.com',
+  'https://chakra-ui.com/docs',
+  'https://mantine.dev/pages/basics',
+  
+  // API and integration
+  'https://restfulapi.net',
+  'https://graphql.org/learn',
+  'https://swagger.io/docs',
+  'https://postman.com/docs',
+  'https://insomnia.rest/docs',
+  
+  // Business and productivity
+  'https://support.google.com',
+  'https://support.microsoft.com',
+  'https://support.apple.com',
+  'https://help.slack.com',
+  'https://support.zoom.us',
+  'https://help.trello.com',
+  'https://support.atlassian.com',
+  
+  // E-commerce platforms
+  'https://help.shopify.com',
+  'https://docs.woocommerce.com',
+  'https://developer.bigcommerce.com',
+  'https://stripe.com/docs',
+  'https://developer.paypal.com',
+  
+  // Content management
+  'https://wordpress.org/support',
+  'https://www.drupal.org/docs',
+  'https://docs.contentful.com',
+  'https://strapi.io/documentation',
+  'https://forestry.io/docs',
+  
+  // Analytics and monitoring
+  'https://support.google.com/analytics',
+  'https://help.mixpanel.com',
+  'https://docs.sentry.io',
+  'https://docs.newrelic.com',
+  'https://docs.datadoghq.com',
+  
+  // Security and authentication
+  'https://auth0.com/docs',
+  'https://firebase.google.com/docs/auth',
+  'https://docs.okta.com',
+  'https://developer.okta.com',
+  'https://docs.aws.amazon.com/cognito'
 ];
 
 // Selectors (these may need to be updated based on the actual Tidio interface)
