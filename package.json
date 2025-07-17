@@ -9,6 +9,7 @@
   "scripts": {
     "start": "node server.js",
     "dev": "node server.js",
+    "build": "echo 'No build required'",
     "test": "echo \"No tests specified\" && exit 0"
   },
   "dependencies": {
